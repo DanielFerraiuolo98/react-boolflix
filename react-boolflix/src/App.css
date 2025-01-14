@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -16,12 +20,6 @@ header {
 
 h1 {
   color: red;
-}
-
-.titolo {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
 }
 
 .searchbar {
@@ -43,6 +41,33 @@ button {
 main {
   background-color: #555555;
   margin-top: 50px;
+  width: 100vw;
+}
+
+.container-film,
+.container-serie {
+  background-color: #555555;
+  height: 50px;
+  position: relative;
+}
+
+.film {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  font-size: 30px;
+}
+
+.serie {
+  color: white;
+  font-size: 30px;
+}
+
+.movies,
+.series {
+  width: 1280px;
+  margin: 0 auto;
 }
 
 ul {
@@ -69,6 +94,7 @@ li:hover .voto {
 
 img {
   height: 342px;
+  width: 300px;
 }
 
 h2,
