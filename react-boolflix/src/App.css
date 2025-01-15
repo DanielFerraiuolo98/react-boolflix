@@ -79,28 +79,49 @@ ul {
 
 li {
   position: relative;
+  overflow: hidden;
+}
+
+.flag {
+  position: absolute;
+  bottom: 10px;
+  left: 100px;
+  width: 40px;
+  height: 30px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
 }
 
 li:hover {
   cursor: pointer;
 }
 
+li:hover img {
+  opacity: 0;
+}
+
+li:hover .overlay {
+  opacity: 1;
+}
+
 li:hover h2,
 li:hover h3,
+li:hover .flag,
 li:hover .language,
-li:hover .voto {
+li:hover .stars {
   opacity: 1;
 }
 
 img {
   height: 342px;
   width: 300px;
+  transition: opacity 0.3s ease;
 }
 
 h2,
 h3,
-.language,
-.voto {
+.language {
   position: absolute;
   color: white;
   z-index: 2;
@@ -125,4 +146,31 @@ h3 {
 .voto {
   bottom: 10px;
   left: 10px;
+}
+
+.star {
+  font-size: 24px;
+  color: gray;
+}
+
+.star.full {
+  color: gold;
+}
+
+.star.half {
+  color: gold;
+  background: linear-gradient(to right, gold 50%, gray 50%);
+  background-clip: text;
+  color: transparent;
+}
+
+.stars {
+  position: absolute;
+  bottom: -10px;
+  left: 50px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 3;
 }
